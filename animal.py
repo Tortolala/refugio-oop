@@ -11,23 +11,23 @@ class Animal:
         self.energia = 50
 
     def presentarse(self):
-        text = f'Hola, soy {self.nombre} ({self.especie} | {self.edad} ã)'
+        text = f'\nHola, soy {self.nombre} ({self.especie} | {self.edad} ã)'
         print(text)
 
     def jugar(self):
         self.energia -= 20
         if self.energia < 0:
             self.energia = 0
-        print(f'Jugando... energía nueva: {self.energia}')
+        print(f'\n({self.nombre}) Jugando... energía nueva: {self.energia}')
 
     def comer(self, gramos: int):
         self.energia += (gramos // 10)
         if self.energia > 100:
             self.energia = 100
-        print(f'Comiendo... energía nueva: {self.energia}')
+        print(f'\n({self.nombre}) Comiendo... energía nueva: {self.energia}')
 
     def dormir(self):
         self.energia += 30
         if self.energia > 100:
             self.energia = 100
-        print(f'Durmiendo... energía nueva: {self.energia}')
+        print(f'\n({self.nombre}) Durmiendo... energía nueva: {self.energia}')
